@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,4 +20,139 @@
   </model-viewer>
 
 </body>
+</html>-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Создание 3D моделей для маркетплейсов с поддержкой дополненной реальности для WB (Wildberries). Продажа услуги по разработке моделей в форматах .glb и .usdz.">
+  <meta name="author" content="Ваша компания">
+  <title>Дополненная реальность для WB</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #007bff;
+      font-size: 28px;
+    }
+    .model-viewer-container {
+      max-width: 100%;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .cta-btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: background-color 0.3s;
+    }
+    .cta-btn:hover {
+      background-color: #0056b3;
+    }
+    .testimonial {
+      background-color: #e9ecef;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Создайте 3D модель для вашего магазина на Wildberries</h1>
+    <p>Добавьте интерактивность и поддержите дополненную реальность на маркетплейсе с помощью профессиональных 3D моделей в форматах .glb и .usdz.</p>
+  </header>
+
+  <!-- Introduction Section -->
+  <section>
+    <h2>Что мы предлагаем?</h2>
+    <p>Мы предлагаем услугу по созданию 3D моделей ваших товаров в популярных форматах для маркетплейсов, включая Wildberries. Модели будут готовы для размещения в каталоге Wildberries с поддержкой дополненной реальности (AR), чтобы покупатели могли увидеть ваш товар в реальной среде через их мобильное устройство.</p>
+    <p>Модели будут поддерживать следующие форматы: <strong>.glb</strong> и <strong>.usdz</strong>, что обеспечит широкую совместимость с различными устройствами (Android, iOS, браузеры).</p>
+  </section>
+
+  <!-- Model Viewer Section (with AR demo) -->
+  <section class="model-viewer-container">
+    <h2>Демонстрация 3D модели с AR</h2>
+    <p>Нажмите "Просмотр в AR", чтобы увидеть, как товар будет выглядеть в реальной среде.</p>
+
+    <model-viewer src="https://raw.githubusercontent.com/username/3d-models/main/model.glb"
+                  alt="3D Model"
+                  auto-rotate
+                  camera-controls
+                  ar
+                  ar-modes="webxr scene-viewer quick-look"
+                  style="width: 100%; height: 500px;">
+    </model-viewer>
+
+    <a href="#order" class="cta-btn">Заказать модель</a>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section>
+    <h2>Почему выбирают нас?</h2>
+    <div class="testimonial">
+      <p><strong>Качество</strong>: Мы создаем высококачественные 3D модели, которые идеально подходят для размещения на маркетплейсах и в AR.</p>
+    </div>
+    <div class="testimonial">
+      <p><strong>Поддержка AR</strong>: Наши модели поддерживают дополненную реальность, что позволяет покупателям увидеть товары в реальной среде через смартфон.</p>
+    </div>
+    <div class="testimonial">
+      <p><strong>Быстрота и удобство</strong>: Мы гарантируем быстрое создание моделей и удобный процесс их размещения на платформе Wildberries.</p>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section id="order" style="text-align: center;">
+    <h2>Готовы начать?</h2>
+    <p>Заполните форму ниже, чтобы заказать создание 3D модели для вашего товара. Мы свяжемся с вами для обсуждения деталей.</p>
+    <a href="mailto:your-email@example.com" class="cta-btn">Написать нам</a>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Ваша компания | Все права защищены.</p>
+    <p><a href="mailto:your-email@example.com" style="color: white;">Контактная информация</a></p>
+  </footer>
+
+</body>
 </html>
+
