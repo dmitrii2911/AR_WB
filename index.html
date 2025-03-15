@@ -19,52 +19,74 @@
                 style="width: 100%; height: 500px;">
   </model-viewer>
 
-</body>
-</html>-->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Создание 3D моделей для маркетплейсов с поддержкой дополненной реальности для WB (Wildberries). Продажа услуги по разработке моделей в форматах .glb и .usdz.">
+  <meta name="description" content="Профессиональное создание 3D моделей для маркетплейсов с поддержкой AR на Wildberries. Увеличьте продажи с помощью интерактивных 3D-карточек товаров. Индексация товаров для повышения видимости на платформе и в поисковых системах.">
+  <meta name="keywords" content="3D модели, AR, дополненная реальность, Wildberries, маркетплейс, 3D визуализация, e-commerce, ЫУЩ, 3D карточки товаров, AR технологии, оптимизация карточек товаров, визуализация для маркетплейсов, продажа товаров, индексирование товаров">
   <meta name="author" content="Ваша компания">
-  <title>Дополненная реальность для WB</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Дополненная реальность для Wildberries - 3D модели">
+  <meta property="og:description" content="Создавайте качественные 3D-модели товаров с поддержкой AR и увеличивайте продажи на Wildberries">
+  <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="3D для Wildberries">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3D модели для Wildberries с поддержкой AR">
+  <meta name="twitter:description" content="Увеличьте свои продажи на Wildberries с помощью 3D моделей и AR. Получите консультацию уже сегодня!">
+  <meta name="twitter:image" content="https://yourwebsite.com/preview-image.jpg">
+
+  <!-- Meta Tags for SEO -->
+  <meta name="robots" content="index, follow">
+  
+  <title>Дополненная реальность для Wildberries - 3D модели</title>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background-color: #007bff;
+      background: linear-gradient(135deg, #007bff, #6610f2);
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 60px 20px;
     }
     header h1 {
+      font-size: 42px;
       margin: 0;
-      font-size: 36px;
     }
     header p {
       font-size: 18px;
       margin-top: 10px;
     }
     section {
-      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
     h2 {
       text-align: center;
       color: #007bff;
       font-size: 28px;
     }
-    .model-viewer-container {
-      max-width: 100%;
-      margin: 40px auto;
+    .model-container {
       text-align: center;
+      padding: 20px;
     }
     .cta-btn {
       display: inline-block;
@@ -73,86 +95,107 @@
       padding: 15px 30px;
       font-size: 18px;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 30px;
-      transition: background-color 0.3s;
+      border-radius: 50px;
+      transition: 0.3s;
+      text-align: center;
     }
     .cta-btn:hover {
       background-color: #0056b3;
     }
-    .testimonial {
-      background-color: #e9ecef;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
       padding: 20px;
+    }
+    .grid div {
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
       border-radius: 8px;
-      margin: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     footer {
-      background-color: #343a40;
+      background: #343a40;
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
+    }
+    .chart-container {
+      width: 80%;
+      margin: 20px auto;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header Section -->
   <header>
-    <h1>Создайте 3D модель для вашего магазина на Wildberries</h1>
-    <p>Добавьте интерактивность и поддержите дополненную реальность на маркетплейсе с помощью профессиональных 3D моделей в форматах .glb и .usdz.</p>
+    <h1>Дополненная реальность для Wildberries</h1>
+    <p>Создавайте 3D-модели товаров для маркетплейсов, улучшайте визуальную подачу и увеличивайте конверсию!</p>
   </header>
 
-  <!-- Introduction Section -->
   <section>
-    <h2>Что мы предлагаем?</h2>
-    <p>Мы предлагаем услугу по созданию 3D моделей ваших товаров в популярных форматах для маркетплейсов, включая Wildberries. Модели будут готовы для размещения в каталоге Wildberries с поддержкой дополненной реальности (AR), чтобы покупатели могли увидеть ваш товар в реальной среде через их мобильное устройство.</p>
-    <p>Модели будут поддерживать следующие форматы: <strong>.glb</strong> и <strong>.usdz</strong>, что обеспечит широкую совместимость с различными устройствами (Android, iOS, браузеры).</p>
+    <h2>Наши преимущества</h2>
+    <div class="grid">
+      <div><i class="fas fa-check-circle"></i> Фотореалистичные 3D-модели</div>
+      <div><i class="fas fa-vr-cardboard"></i> Поддержка дополненной реальности</div>
+      <div><i class="fas fa-clock"></i> Оперативное выполнение заказов</div>
+      <div><i class="fas fa-shopping-cart"></i> Оптимизация для Wildberries</div>
+    </div>
   </section>
 
-  <!-- Model Viewer Section (with AR demo) -->
-  <section class="model-viewer-container">
-    <h2>Демонстрация 3D модели с AR</h2>
-    <p>Нажмите "Просмотр в AR", чтобы увидеть, как товар будет выглядеть в реальной среде.</p>
-
-    <model-viewer src="https://raw.githubusercontent.com/username/3d-models/main/model.glb"
-                  alt="3D Model"
+  <section class="model-container">
+    <h2>Пример 3D-модели</h2>
+    <model-viewer src="https://dmitrii2911.github.io/AR_WB/modern__sofa.glb"
+                  alt="Пример 3D модели"
                   auto-rotate
                   camera-controls
                   ar
                   ar-modes="webxr scene-viewer quick-look"
                   style="width: 100%; height: 500px;">
     </model-viewer>
-
-    <a href="#order" class="cta-btn">Заказать модель</a>
+    <br>
+    <a href="#contact" class="cta-btn">Получить консультацию</a>
   </section>
 
-  <!-- Why Choose Us Section -->
   <section>
-    <h2>Почему выбирают нас?</h2>
-    <div class="testimonial">
-      <p><strong>Качество</strong>: Мы создаем высококачественные 3D модели, которые идеально подходят для размещения на маркетплейсах и в AR.</p>
-    </div>
-    <div class="testimonial">
-      <p><strong>Поддержка AR</strong>: Наши модели поддерживают дополненную реальность, что позволяет покупателям увидеть товары в реальной среде через смартфон.</p>
-    </div>
-    <div class="testimonial">
-      <p><strong>Быстрота и удобство</strong>: Мы гарантируем быстрое создание моделей и удобный процесс их размещения на платформе Wildberries.</p>
+    <h2>Преимущества 3D-карточек</h2>
+    <div class="chart-container">
+      <canvas id="arChart"></canvas>
     </div>
   </section>
 
-  <!-- Call-to-Action Section -->
-  <section id="order" style="text-align: center;">
-    <h2>Готовы начать?</h2>
-    <p>Заполните форму ниже, чтобы заказать создание 3D модели для вашего товара. Мы свяжемся с вами для обсуждения деталей.</p>
-    <a href="mailto:your-email@example.com" class="cta-btn">Написать нам</a>
+  <section id="contact" style="text-align: center;">
+    <h2>Закажите 3D-модель</h2>
+    <p>Мы создаем профессиональные 3D-модели, которые повышают вовлеченность покупателей и конверсию.</p>
+    <a href="mailto:your-email@example.com" class="cta-btn">Связаться с нами</a>
   </section>
 
-  <!-- Footer Section -->
   <footer>
     <p>&copy; 2025 Ваша компания | Все права защищены.</p>
-    <p><a href="mailto:your-email@example.com" style="color: white;">Контактная информация</a></p>
+    <p><a href="mailto:your-email@example.com" style="color: white; text-decoration: none;">Контакты</a></p>
   </footer>
 
+  <script>
+    const chartContext = document.getElementById('arChart').getContext('2d');
+    new Chart(chartContext, {
+      type: 'bar',
+      data: {
+        labels: ['Увеличение продаж', 'Больше просмотров', 'Меньше возвратов', 'Выше вовлеченность'],
+        datasets: [{
+          label: 'Процент улучшения',
+          data: [40, 60, 30, 50],
+          backgroundColor: ['#007bff', '#6610f2', '#28a745', '#ffc107']
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
-
