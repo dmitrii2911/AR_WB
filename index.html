@@ -8,27 +8,15 @@
 </head>
 <body>
 
-  <h1>Смотрите 3D модель в дополненной реальности</h1>
-
-  <model-viewer src="https://dmitrii2911.github.io/AR_WB/modern__sofa.glb"
-                alt="3D Model"
-                auto-rotate
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look"
-                style="width: 100%; height: 500px;">
-  </model-viewer>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Профессиональное создание 3D моделей для маркетплейсов с поддержкой AR на Wildberries. Увеличьте продажи с помощью интерактивных 3D-карточек товаров. Индексация товаров для повышения видимости на платформе и в поисковых системах.">
-  <meta name="keywords" content="3D модели, AR, дополненная реальность, Wildberries, маркетплейс, 3D визуализация, e-commerce, ЫУЩ, 3D карточки товаров, AR технологии, оптимизация карточек товаров, визуализация для маркетплейсов, продажа товаров, индексирование товаров">
+  <meta name="description" content="Профессиональное создание 3D моделей для маркетплейсов с поддержкой AR на Wildberries. Увеличьте продажи с помощью интерактивных 3D-карточек товаров.">
+  <meta name="keywords" content="3D модели, AR, дополненная реальность, Wildberries, маркетплейс, 3D визуализация, e-commerce, 3D карточки товаров, AR технологии, оптимизация карточек товаров, визуализация для маркетплейсов, продажа товаров">
   <meta name="author" content="Ваша компания">
   
-  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Дополненная реальность для Wildberries - 3D модели">
   <meta property="og:description" content="Создавайте качественные 3D-модели товаров с поддержкой AR и увеличивайте продажи на Wildberries">
   <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
@@ -36,13 +24,11 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="3D для Wildberries">
   
-  <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="3D модели для Wildberries с поддержкой AR">
   <meta name="twitter:description" content="Увеличьте свои продажи на Wildberries с помощью 3D моделей и AR. Получите консультацию уже сегодня!">
   <meta name="twitter:image" content="https://yourwebsite.com/preview-image.jpg">
-
-  <!-- Meta Tags for SEO -->
+  
   <meta name="robots" content="index, follow">
   
   <title>Дополненная реальность для Wildberries - 3D модели</title>
@@ -54,50 +40,61 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #007bff, #6610f2);
+      background: linear-gradient(135deg, #6a5bff, #007bff);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
+      border-bottom: 5px solid #0056b3;
     }
     header h1 {
-      font-size: 42px;
+      font-size: 50px;
       margin: 0;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
     header p {
-      font-size: 18px;
+      font-size: 20px;
       margin-top: 10px;
     }
     section {
       max-width: 1200px;
       margin: 40px auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    section:hover {
+      transform: scale(1.02);
     }
     h2 {
       text-align: center;
       color: #007bff;
-      font-size: 28px;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-transform: uppercase;
     }
     .model-container {
       text-align: center;
-      padding: 20px;
+      padding: 40px;
+      background: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     .cta-btn {
       display: inline-block;
       background-color: #007bff;
       color: white;
-      padding: 15px 30px;
-      font-size: 18px;
+      padding: 18px 30px;
+      font-size: 20px;
       text-decoration: none;
       border-radius: 50px;
-      transition: 0.3s;
-      text-align: center;
+      transition: background-color 0.3s ease;
     }
     .cta-btn:hover {
       background-color: #0056b3;
@@ -105,27 +102,56 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      gap: 30px;
       padding: 20px;
     }
     .grid div {
       background: #f8f9fa;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    .grid div:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
     footer {
       background: #343a40;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 25px;
+      margin-top: 60px;
+      font-size: 18px;
+    }
+    footer a {
+      color: #007bff;
+      text-decoration: none;
     }
     .chart-container {
       width: 80%;
-      margin: 20px auto;
+      margin: 30px auto;
       text-align: center;
+    }
+    .chart {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      position: relative;
+    }
+    .chart .progress-bar {
+      height: 100%;
+      border-radius: 10px;
+      position: absolute;
+    }
+    .chart .label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      color: white;
     }
   </style>
 </head>
@@ -147,7 +173,7 @@
 
   <section class="model-container">
     <h2>Пример 3D-модели</h2>
-    <model-viewer src="https://dmitrii2911.github.io/AR_WB/modern__sofa.glb"
+    <model-viewer src="https://raw.githubusercontent.com/username/3d-models/main/model.glb"
                   alt="Пример 3D модели"
                   auto-rotate
                   camera-controls
@@ -162,40 +188,15 @@
   <section>
     <h2>Преимущества 3D-карточек</h2>
     <div class="chart-container">
-      <canvas id="arChart"></canvas>
-    </div>
-  </section>
+      <!-- Конверсия -->
+      <div class="chart">
+        <div class="progress-bar" style="width: 70%; background-color: #007bff;"></div>
+        <div class="progress-bar" style="width: 40%; background-color: #ddd;"></div>
+        <span class="label">Конверсия</span>
+      </div>
 
-  <section id="contact" style="text-align: center;">
-    <h2>Закажите 3D-модель</h2>
-    <p>Мы создаем профессиональные 3D-модели, которые повышают вовлеченность покупателей и конверсию.</p>
-    <a href="mailto:your-email@example.com" class="cta-btn">Связаться с нами</a>
-  </section>
+      <!-- Время просмотра -->
+      <div class="chart">
+        <div class="progress-bar" style="width: 80%; background-color: #28a745;"></div>
+        <div class="progress-bar" style="width: 50%;
 
-  <footer>
-    <p>&copy; 2025 Ваша компания | Все права защищены.</p>
-    <p><a href="mailto:your-email@example.com" style="color: white; text-decoration: none;">Контакты</a></p>
-  </footer>
-
-  <script>
-    const chartContext = document.getElementById('arChart').getContext('2d');
-    new Chart(chartContext, {
-      type: 'bar',
-      data: {
-        labels: ['Увеличение продаж', 'Больше просмотров', 'Меньше возвратов', 'Выше вовлеченность'],
-        datasets: [{
-          label: 'Процент улучшения',
-          data: [40, 60, 30, 50],
-          backgroundColor: ['#007bff', '#6610f2', '#28a745', '#ffc107']
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: { beginAtZero: true }
-        }
-      }
-    });
-  </script>
-</body>
-</html>
